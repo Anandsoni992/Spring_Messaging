@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/hello")
 public class HelloController {
 
-    @GetMapping("/query")
-    public String sayHello(@RequestParam(value = "name") String name) {
+    @GetMapping("/param/{name}")
+    public String sayHello(@PathVariable String name) {
         return "Hello " + name + " from BridgeLabz!";
     }
 }
